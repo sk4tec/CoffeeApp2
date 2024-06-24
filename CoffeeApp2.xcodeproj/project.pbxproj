@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBB1C8502C29BBCE0024A1B6 /* CoffeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */; };
 		FBBE31EF2C284155002E8EA9 /* CoffeeApp2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE31EE2C284155002E8EA9 /* CoffeeApp2App.swift */; };
 		FBBE31F12C284155002E8EA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE31F02C284155002E8EA9 /* ContentView.swift */; };
 		FBBE31F32C284156002E8EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBE31F22C284156002E8EA9 /* Assets.xcassets */; };
 		FBBE31F62C284156002E8EA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBBE31F52C284156002E8EA9 /* Preview Assets.xcassets */; };
+		FBBE31FD2C284169002E8EA9 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE31FC2C284169002E8EA9 /* NetworkApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeData.swift; sourceTree = "<group>"; };
 		FBBE31EB2C284155002E8EA9 /* CoffeeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBE31EE2C284155002E8EA9 /* CoffeeApp2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApp2App.swift; sourceTree = "<group>"; };
 		FBBE31F02C284155002E8EA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBBE31F22C284156002E8EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBBE31F52C284156002E8EA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FBBE31FC2C284169002E8EA9 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		FBBE31ED2C284155002E8EA9 /* CoffeeApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				FBBE31FC2C284169002E8EA9 /* NetworkApi.swift */,
+				FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */,
 				FBBE31EE2C284155002E8EA9 /* CoffeeApp2App.swift */,
 				FBBE31F02C284155002E8EA9 /* ContentView.swift */,
 				FBBE31F22C284156002E8EA9 /* Assets.xcassets */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBE31FD2C284169002E8EA9 /* NetworkApi.swift in Sources */,
+				FBB1C8502C29BBCE0024A1B6 /* CoffeeData.swift in Sources */,
 				FBBE31F12C284155002E8EA9 /* ContentView.swift in Sources */,
 				FBBE31EF2C284155002E8EA9 /* CoffeeApp2App.swift in Sources */,
 			);

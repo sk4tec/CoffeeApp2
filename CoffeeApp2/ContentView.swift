@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var coffeeList: [CoffeeData] = [CoffeeData]()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+            List {
+                ForEach(coffeeList) { list in
+                    Text(list.title)
+                }
+            }
+       }
         .padding()
+        .task {
+            do {
+                coffeeList = try await NetworkApi.getCoffee()
+            } catch {
+                print("error \(error)")
+            }
+        }
     }
 }
 
