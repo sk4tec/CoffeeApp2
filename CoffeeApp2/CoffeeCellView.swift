@@ -40,6 +40,11 @@ struct CoffeeCellView: View {
 }
 
 #Preview {
-    CoffeeCellView(title: "Black Coffee", description: "Svart kaffe är så enkelt som det kan bli med malda kaffebönor dränkta i hett vatten, serverat varmt. Och om du vill låta fancy kan du kalla svart kaffe med sitt rätta namn: café noir", image:  "https://images.unsplash.com/photo-1494314671902-399b18174975", like: true)
-        .background(Color.red)
+    CoffeeCellView(
+        title: "Black Coffee",
+        description: "Svart kaffe är så enkelt som det kan bli med malda kaffebönor dränkta i hett vatten, serverat varmt. Och om du vill låta fancy kan du kalla svart kaffe med sitt rätta namn: café noir",
+        image:  "https://images.unsplash.com/photo-1494314671902-399b18174975",
+        like: true
+    )
+    .background(Color.red)
 }
