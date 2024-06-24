@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBAD15032C29E58700CB3DC9 /* CoffeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD15022C29E58700CB3DC9 /* CoffeeDetailView.swift */; };
 		FBB1C8502C29BBCE0024A1B6 /* CoffeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */; };
 		FBB1C8522C29BCEC0024A1B6 /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB1C8512C29BCEC0024A1B6 /* CoffeeCellView.swift */; };
 		FBBE31EF2C284155002E8EA9 /* CoffeeApp2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBE31EE2C284155002E8EA9 /* CoffeeApp2App.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FBAD15022C29E58700CB3DC9 /* CoffeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailView.swift; sourceTree = "<group>"; };
 		FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeData.swift; sourceTree = "<group>"; };
 		FBB1C8512C29BCEC0024A1B6 /* CoffeeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
 		FBBE31EB2C284155002E8EA9 /* CoffeeApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +61,7 @@
 			children = (
 				FBBE31FC2C284169002E8EA9 /* NetworkApi.swift */,
 				FBB1C8512C29BCEC0024A1B6 /* CoffeeCellView.swift */,
+				FBAD15022C29E58700CB3DC9 /* CoffeeDetailView.swift */,
 				FBB1C84F2C29BBCE0024A1B6 /* CoffeeData.swift */,
 				FBBE31EE2C284155002E8EA9 /* CoffeeApp2App.swift */,
 				FBBE31F02C284155002E8EA9 /* ContentView.swift */,
@@ -149,6 +152,7 @@
 				FBB1C8522C29BCEC0024A1B6 /* CoffeeCellView.swift in Sources */,
 				FBBE31FD2C284169002E8EA9 /* NetworkApi.swift in Sources */,
 				FBB1C8502C29BBCE0024A1B6 /* CoffeeData.swift in Sources */,
+				FBAD15032C29E58700CB3DC9 /* CoffeeDetailView.swift in Sources */,
 				FBBE31F12C284155002E8EA9 /* ContentView.swift in Sources */,
 				FBBE31EF2C284155002E8EA9 /* CoffeeApp2App.swift in Sources */,
 			);
