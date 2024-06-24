@@ -11,6 +11,7 @@ struct CoffeeCellView: View {
     let title: String
     let description: String
     let image: String
+    var like: Bool
 
     var body: some View {
         VStack(alignment: .leading){
@@ -27,6 +28,7 @@ struct CoffeeCellView: View {
                     VStack (alignment: .leading) {
                         Text(title)
                             .font(.title)
+                        Text(like.description)
                         Text(description)
                             .lineLimit(3)
                             .font(.body)
@@ -38,6 +40,6 @@ struct CoffeeCellView: View {
 }
 
 #Preview {
-    CoffeeCellView(title: "Black Coffee", description: "Svart kaffe är så enkelt som det kan bli med malda kaffebönor dränkta i hett vatten, serverat varmt. Och om du vill låta fancy kan du kalla svart kaffe med sitt rätta namn: café noir", image:  "https://images.unsplash.com/photo-1494314671902-399b18174975")
+    CoffeeCellView(title: "Black Coffee", description: "Svart kaffe är så enkelt som det kan bli med malda kaffebönor dränkta i hett vatten, serverat varmt. Och om du vill låta fancy kan du kalla svart kaffe med sitt rätta namn: café noir", image:  "https://images.unsplash.com/photo-1494314671902-399b18174975", like: true)
         .background(Color.red)
 }
