@@ -21,3 +21,13 @@ struct CoffeeData: Codable, Identifiable {
         case image
     }
 }
+
+
+struct CoffeeModel: Identifiable {
+    let id = UUID()
+    let title: String
+    let description: String
+    let ingredients: [String]
+    let image: String
+    var like: Bool
+}
