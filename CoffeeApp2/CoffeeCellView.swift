@@ -17,18 +17,22 @@ struct CoffeeCellView: View {
         VStack(alignment: .leading){
             HStack (alignment: .top) {
                 if let imageUrl = URL(string: image) {
-                    AsyncImage(url: imageUrl) { asyncImage in
-                        asyncImage
-                            .image?.resizable()
-                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    AsyncImage(url: URL(string: image)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .cornerRadius(8.0)
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    } placeholder: {
+                        ProgressView()
                     }
                 }
                 HStack(alignment: .top) {
                     VStack (alignment: .leading) {
                         Text(title)
                             .font(.title)
-                        Text(like.description)
+                        Image(systemName: like ? "heart.fill" : "heart")
+                               .foregroundColor(like ? .red : .gray)
                         Text(description)
                             .lineLimit(3)
                             .font(.body)

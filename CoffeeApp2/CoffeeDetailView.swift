@@ -37,11 +37,15 @@ struct CoffeeDetailView: View {
                 Text(ingredient)
             }
 
-            Button("Like") {
+            Button(buttonText) {
                 like.toggle()
             }
         }
         .padding()
+    }
+
+    var buttonText: String {
+        like ? "Unlike" : "Like"
     }
 }
 
