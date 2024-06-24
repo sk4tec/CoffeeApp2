@@ -11,19 +11,24 @@ struct ContentView: View {
     @State var coffeeList: [CoffeeData] = [CoffeeData]()
 
     var body: some View {
-        VStack {
+        NavigationView {
             List {
                 ForEach(coffeeList) { item in
-                    CoffeeCellView(title: item.title, description: item.description, image: item.image)
+
+                    NavigationLink(destination: {
+                        CoffeeDetailView(title: item.title, description: item.description, image: item.image, ingredients: item.ingredients)
+                    }, label: {
+                        CoffeeCellView(title: item.title, description: item.description, image: item.image)
+                    })
                 }
             }
-       }
-        .padding()
-        .task {
-            do {
-                coffeeList = try await NetworkApi.getCoffee()
-            } catch {
-                print("error \(error)")
+            .padding()
+            .task {
+                do {
+                    coffeeList = try await NetworkApi.getCoffee()
+                } catch {
+                    print("error \(error)")
+                }
             }
         }
     }

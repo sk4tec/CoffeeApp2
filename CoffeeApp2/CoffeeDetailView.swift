@@ -14,12 +14,12 @@ struct CoffeeDetailView: View {
     let ingredients: [String]
 
     var body: some View {
-        VStack (alignment: .leading) {
+        VStack {
             if let imageUrl = URL(string: image) {
                 AsyncImage(url: imageUrl) { asyncImage in
                     asyncImage
                         .image?.resizable()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .cornerRadius(8.0)
                 }
             }
@@ -36,6 +36,7 @@ struct CoffeeDetailView: View {
                 Text(ingredient)
             }
         }
+        .padding()
     }
 }
 
