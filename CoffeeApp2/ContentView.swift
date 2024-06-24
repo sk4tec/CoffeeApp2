@@ -8,26 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var coffeeList: [CoffeeData] = [CoffeeData]()
+    @State var coffeeList: [CoffeeModel] = [CoffeeModel]()
+    @State var firstLoad = true
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(coffeeList) { item in
-
+                ForEach($coffeeList) { $item in
                     NavigationLink(destination: {
-                        CoffeeDetailView(title: item.title, description: item.description, image: item.image, ingredients: item.ingredients)
-                    }, label: {
-                        CoffeeCellView(title: item.title, description: item.description, image: item.image)
+                        CoffeeDetailView(
+                            title: item.title,
+                            description: item.description,
+                            image: item.image,
+                            ingredients: item.ingredients,
+                            like: $item.like
+                        )
+                    },
+                    label: {
+                        CoffeeCellView(title: item.title, description: item.description, image: item.image, like: item.like)
                     })
                 }
             }
             .padding()
             .task {
-                do {
-                    coffeeList = try await NetworkApi.getCoffee()
-                } catch {
-                    print("error \(error)")
+                if firstLoad {
+                    do {
+                        coffeeList = try await NetworkApi.getCoffee()
+                        firstLoad = false
+                    } catch {
+                        print("error \(error)")
+                    }
                 }
             }
         }

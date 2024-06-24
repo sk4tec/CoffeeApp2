@@ -8,7 +8,7 @@
 import Foundation
 
 class NetworkApi {
-    static func getCoffee() async throws -> [CoffeeData] {
+    static func getCoffee() async throws -> [CoffeeModel] {
         let endpoint = "https://api.sampleapis.com/coffee/hot"
 
         // make URL
@@ -24,7 +24,10 @@ class NetworkApi {
         do {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            return try decoder.decode([CoffeeData].self, from: data)
+            let coffeeData = try decoder.decode([CoffeeData].self, from: data)
+            return coffeeData.map { coffeeDataItem in
+                CoffeeModel(title: coffeeDataItem.title, description: coffeeDataItem.description, ingredients: coffeeDataItem.ingredients, image: coffeeDataItem.image, like: false)
+            }
         } catch {
             throw Error.decodeError
         }
