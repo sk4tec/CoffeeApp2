@@ -13,8 +13,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(coffeeList) { list in
-                    Text(list.title)
+                ForEach(coffeeList) { item in
+                    CoffeeCellView(title: item.title, description: item.description, image: item.image)
                 }
             }
        }
