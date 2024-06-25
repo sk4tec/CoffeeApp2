@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State var coffeeList: [CoffeeModel] = [CoffeeModel]()
+struct CoffeeHomeView: View {
+    @StateObject var viewModel = CoffeeHomeViewViewModel()
     @State var firstLoad = true
 
     var body: some View {
         NavigationView {
             List {
-                ForEach($coffeeList) { $item in
+                ForEach($viewModel.coffeeList) { $item in
                     NavigationLink(destination: {
                         CoffeeDetailView(
                             title: item.title,
@@ -32,12 +32,8 @@ struct ContentView: View {
             .padding()
             .task {
                 if firstLoad {
-                    do {
-                        coffeeList = try await NetworkApi.getCoffee()
-                        firstLoad = false
-                    } catch {
-                        print("error \(error)")
-                    }
+                    await viewModel.loadData()
+                    firstLoad = false
                 }
             }
         }
@@ -45,5 +41,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CoffeeHomeView()
 }
