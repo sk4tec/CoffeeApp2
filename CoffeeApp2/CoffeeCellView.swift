@@ -17,7 +17,7 @@ struct CoffeeCellView: View {
         VStack(alignment: .leading){
             HStack (alignment: .top) {
                 if let imageUrl = URL(string: image) {
-                    AsyncImage(url: URL(string: image)) { image in
+                    AsyncImage(url: imageUrl) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)

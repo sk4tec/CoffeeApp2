@@ -4,7 +4,6 @@
 //
 //  Created by Sunjay Kalsi on 24/06/2024.
 //
-
 import Foundation
 
 struct CoffeeData: Codable, Identifiable {
@@ -21,7 +20,6 @@ struct CoffeeData: Codable, Identifiable {
         case image
     }
 }
-
 
 struct CoffeeModel: Identifiable {
     let id = UUID()
