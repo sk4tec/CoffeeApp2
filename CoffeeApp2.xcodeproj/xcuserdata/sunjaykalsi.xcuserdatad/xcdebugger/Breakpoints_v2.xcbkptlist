@@ -3,4 +3,68 @@
    uuid = "474E3DAD-E205-401F-AFA9-41D5D025A435"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A76C2794-AA8B-4BE3-AF5F-43BC873C7178"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeApp2/NetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getCoffee()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A76C2794-AA8B-4BE3-AF5F-43BC873C7178 - f3b7d39503bc4938"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static CoffeeApp2.NetworkApi.getCoffee() async throws -&gt; Swift.Array&lt;CoffeeApp2.CoffeeModel&gt;"
+                  moduleName = "CoffeeApp2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunjaykalsi/Repos/CoffeeApp2/CoffeeApp2/NetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31">
+               </Location>
+               <Location
+                  uuid = "A76C2794-AA8B-4BE3-AF5F-43BC873C7178 - bf5c932d10088d29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CoffeeApp2.CoffeeData) -&gt; CoffeeApp2.CoffeeModel in static CoffeeApp2.NetworkApi.getCoffee() async throws -&gt; Swift.Array&lt;CoffeeApp2.CoffeeModel&gt;"
+                  moduleName = "CoffeeApp2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunjaykalsi/Repos/CoffeeApp2/CoffeeApp2/NetworkApi.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "625A3563-952D-45BE-AB8A-74F6B05C9A7A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeApp2/NetworkApi.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getCoffee()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

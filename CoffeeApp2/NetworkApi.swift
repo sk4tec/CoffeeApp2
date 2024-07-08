@@ -13,9 +13,12 @@ class NetworkApi {
 
         // make URL
         guard let url = URL(string: endpoint) else { throw Error.invalidURLError }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
 
         // make request
-        let (data, response) = try await URLSession.shared.data(from: url)
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
 
         // cast as get request
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw Error.networkError }
@@ -29,8 +32,11 @@ class NetworkApi {
                 CoffeeModel(title: coffeeDataItem.title, description: coffeeDataItem.description, ingredients: coffeeDataItem.ingredients, image: coffeeDataItem.image, like: false)
             }
         } catch {
+            print(error)
             throw Error.decodeError
         }
+
+        return []
     }
 }
 

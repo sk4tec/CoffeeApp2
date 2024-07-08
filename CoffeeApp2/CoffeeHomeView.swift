@@ -14,19 +14,8 @@ struct CoffeeHomeView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach($viewModel.coffeeList) { $item in
-                    NavigationLink(destination: {
-                        CoffeeDetailView(
-                            title: item.title,
-                            description: item.description,
-                            image: item.image,
-                            ingredients: item.ingredients,
-                            like: $item.like
-                        )
-                    },
-                    label: {
-                        CoffeeCellView(title: item.title, description: item.description, image: item.image, like: item.like)
-                    })
+                ForEach(viewModel.coffeeList) { item in
+                    Text(item.description)
                 }
             }
             .padding()

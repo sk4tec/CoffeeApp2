@@ -6,6 +6,10 @@
 //
 import Foundation
 
+//struct Thing {
+//    let data
+//}
+
 struct CoffeeData: Codable, Identifiable {
     let id = UUID()
     let title: String
